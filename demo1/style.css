@@ -1,0 +1,18 @@
+.map {
+  height: 600px;
+  width: 100%;
+  float:left;
+}
+.icoImage {
+  float: left;
+  height: 60px;
+}
+.heading {
+  float:left;
+}
+.homebutton {
+  float:right;
+}
+.wmsmenu {
+  float:left;
+}

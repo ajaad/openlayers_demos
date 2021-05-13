@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <link rel = "icon" href = "favicon.ico" type = "image/x-icon" />
+    <link rel="stylesheet" href="./libs/v6.5.0-dist/ol.css" type="text/css">
+
+    <!-- include my styling classes -->
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    
+    <title>Kartdemo</title>
+
+  </head>
+  <body>
+    <!-- include static java-script libraries -->
+    <script src="./libs/v6.5.0-dist/ol.js"></script>
+    <script src="./libs/proj4.js"></script>
+
+    <!-- include my functions -->
+    <script src="./scripts/getvariables.js"></script>
+
+    <!-- custom map title -->
+    <!-- example:  ?title=Min kartdemostrasjon -->
+    <img src="favicon.ico" height= "75" alt="Ikon" class="icoImage"/>
+    <h2 class="heading"><script>
+      document.write(titelfunc());
+    </script></h2>
+
+
+    <!-- Add the map-->
+    <div id="map" class="map"></div> 
+    <script  type="module" src="./scripts/main.js"></script>
+  
+
+    <!-- add a custom WMS-layer -->
+    <form method="post" class="wmsmenu">
+      <br>
+      <label for="name">WMS URL: </label>
+      <input type="text" id="newurlwms" name="newurlwms">
+
+      <br>
+
+      <label for="name">WMS layer: </label>
+      <input type="text" id="newlayername" name="newlayername">
+      <input id="addwmslayer" type="button" value="Add a WMS-layer" onclick="doFunction();" />
+    </form>
+    
+    <!-- Home button -->
+    <form method="post" class="homebutton">
+      <br>
+      <input id="goToStartPoint" type="button" value="Back to start" onclick="doFunction();" />
+    </form>
+
+  </body>
+</html>
